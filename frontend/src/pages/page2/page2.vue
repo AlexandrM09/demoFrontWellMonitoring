@@ -9,16 +9,11 @@
       :rows-per-page-items='[30,10,{text: "Все", value: -1}]'
       >
       </v-data-table>
-      <ChartWellDay> </ChartWellDay>
 </div>
 </template>
 <script>
-import ChartWellDay from '@/components/ChartWellDay'
 let colorHeader = 'blue lighten-4'
 export default {
-  components: {
-    ChartWellDay
-  },
   data: () => ({
     headers: [
       {

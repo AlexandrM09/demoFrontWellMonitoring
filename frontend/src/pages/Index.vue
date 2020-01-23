@@ -8,7 +8,7 @@
     class="blue lighten-1 "
     v-model="drawer"
     dark
-    width=200
+    width=250
     >
       <v-list dense>
         <v-list-item
@@ -78,10 +78,9 @@ export default {
       {icon: 'home', text: 'Графики'},
       {icon: 'view_list', text: 'Протокол'},
       {icon: 'trending_up', text: 'График строительства'},
-      {icon: 'notes', text: 'Сведения о скважине'}
-    ],
-    icons: ['home', 'view_list', 'trending_up', 'notes'],
-    pagenames: ['Графики', 'Протокол', 'График строительства', 'Сведения о скважине']
+      {icon: 'notes', text: 'Сведения о скважине'},
+      {icon: '', text: 'Баланс времени'}
+    ]
   }),
   props: {
     source: String

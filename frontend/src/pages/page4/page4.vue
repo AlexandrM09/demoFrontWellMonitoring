@@ -1,15 +1,35 @@
 <template>
-<div class="title">Page 5
-    <v-data-table
-      class=" blue-grey lighten-5 table table-bordered table-hover table-sm "  border="2" height="10%" with="100%"
-      dense
-      :headers="headers"
-      :items="protocol"
-      :items-per-page="30"
-      :rows-per-page-items='[30,10,{text: "Все", value: -1}]'
-      >
-      </v-data-table>
-         <v-simple-table fixed-header height="300px">
+<div class="title">Сведения о скважине
+<v-layout row wrap>
+  <v-flex d-flex  space-around xs12 sm8 md5>
+  <v-card
+      class="left mx-auto"
+      elevation=5
+    >
+    <v-simple-table fixed-header >
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Параметр</th>
+            <th class="text-left">Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in items" :key="item.name">
+            <td>{{ item.name }}</td>
+            <td>{{ item.data }}</td>
+          </tr>
+        </tbody>
+      </template>
+     </v-simple-table>
+    </v-card>
+    </v-flex>
+    <v-flex d-flex xs12 sm6 md4>
+      <v-card
+      class=""
+      elevation=5
+    >
+    <v-simple-table fixed-header >
       <template v-slot:default>
         <thead>
           <tr>
@@ -25,6 +45,9 @@
         </tbody>
       </template>
     </v-simple-table>
+    </v-card>
+    </v-flex>
+ </v-layout>
 </div>
 </template>
 <script>
@@ -32,12 +55,12 @@
 let colorHeader = 'blue lighten-4'
 export default {
   data: () => ({
-    items: [ {name: 'Имя скважины', data: ''},
-      {name: 'Номер скважины', data: ''},
-      {name: '№ Куста', data: ''},
+    items: [ {name: 'Имя скважины', data: 'Уренгойская'},
+      {name: 'Номер скважины', data: '210'},
+      {name: '№ Куста', data: '2'},
       {name: '№ скв', data: ''},
-      {name: 'Партия', data: ''},
-      {name: 'Начальник партии', data: ''},
+      {name: 'Партия', data: '24'},
+      {name: 'Начальник партии', data: 'Иванов А.А.'},
       {name: 'Тип скважины', data: ''},
       {name: 'Назначание скважины', data: ''},
       {name: 'Площадь', data: ''},

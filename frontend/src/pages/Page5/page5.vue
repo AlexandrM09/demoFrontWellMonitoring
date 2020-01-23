@@ -1,16 +1,22 @@
 <template>
-<div class="title">  График
-        <ChartWellDay> </ChartWellDay>
-
+<div class="title"> у3
+    <v-card
+    class="mx-auto"
+      max-width="344"
+      outlined
+      elevation=5
+    >
+        <ChartWellNPV> </ChartWellNPV>
+    </v-card>
 </div>
 </template>
 <script>
 // eslint-disable-next-line spaced-comment
 //import Chart from 'Chart.js/dist/Chart.js'
-import ChartWellDay from '@/components/ChartWellDay'
+import ChartWellNPV from '@/components/ChartWellNPV'
 export default {
   components: {
-    ChartWellDay
+    ChartWellNPV
   },
   data () {
     return {
