@@ -1,23 +1,26 @@
 <template>
  <div id="app">
   <v-app id="inspire">
-    <v-navigation-drawer app
-    class="blue darken-3 "
+    <v-navigation-drawer
+    permanent
+    clipped
+    app
+    class="blue lighten-1 "
     v-model="drawer"
     dark
-    clipped
-     permanent>
+    width=200
+    >
       <v-list dense>
         <v-list-item
-          v-for="i in 4"
+          v-for="(item, i) in items"
           :key="i"
-          :to="{path: '/page' + i}"
+          :to="{path: '/page' + (i+1)}"
         >
           <v-list-item-action>
-            <v-icon>{{ icons[i-1] }}</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title> {{ pagenames[i-1] }}</v-list-item-title>
+            <v-list-item-title> {{ item.text }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -40,7 +43,7 @@
               :key="n"
               @click="() => {}"
             >
-              <v-list-item-title>Option {{ n }}</v-list-item-title>
+              <v-list-item-title>Скважина {{ n }}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-menu>
@@ -62,7 +65,7 @@
 }
 
 .v-data-table td {
-  font-size: 12x;
+  font-size: 6x;
 }
 </style>>
 
@@ -70,7 +73,13 @@
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 export default {
   data: () => ({
-    drawer: true,
+    drawer: null,
+    items: [
+      {icon: 'home', text: 'Графики'},
+      {icon: 'view_list', text: 'Протокол'},
+      {icon: 'trending_up', text: 'График строительства'},
+      {icon: 'notes', text: 'Сведения о скважине'}
+    ],
     icons: ['home', 'view_list', 'trending_up', 'notes'],
     pagenames: ['Графики', 'Протокол', 'График строительства', 'Сведения о скважине']
   }),

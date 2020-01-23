@@ -1,7 +1,8 @@
 <template>
 <div class="title" >Протокол
       <v-data-table
-      class=" table table-bordered table-hover table-sm "  border="2" height="10%" with="100%"
+      class=" blue-grey lighten-5 table table-bordered table-hover table-sm "  border="2" height="10%" with="100%"
+      dense
       :headers="headers"
       :items="protocol"
       :items-per-page="30"
@@ -11,28 +12,30 @@
 </div>
 </template>
 <script>
-
+let colorHeader = 'blue lighten-4'
 export default {
   data: () => ({
     headers: [
       {
         text: 'Дата',
-        align: 'left',
+        align: 'centr',
         sortable: false,
-        value: 'VcDate'
+        value: 'VcDate',
+        class: colorHeader,
+        width: '20px'
       },
-      { text: 'Начало', value: 'CBegTime' },
-      { text: 'Конец', value: 'CEndTime' },
-      { text: 'Всего', value: 'CDeltaTime' },
-      { text: 'Забой', value: 'FEndDrillDepth' },
-      { text: 'Пол. долота', value: 'FEndToolDepth' },
-      { text: 'Код', value: 'CZatrName' },
-      { text: 'Операция', value: 'VcGroupOper' },
-      { text: 'Описание работ', value: 'VcComment' },
-      { text: 'Рейс', value: 'IRangeNum' },
-      { text: 'Этап', value: 'IStageNum' },
-      { text: 'Ок', value: 'ICasingNum' },
-      { text: 'Парам. р-ра', value: 'VcSolutions' }
+      { text: 'Начало', value: 'CBegTime', class: colorHeader, width: 40 },
+      { text: 'Конец', value: 'CEndTime', class: colorHeader },
+      { text: 'Всего', value: 'CDeltaTime', class: colorHeader },
+      { text: 'Забой', value: 'FEndDrillDepth', class: colorHeader },
+      { text: 'Пол. долота', value: 'FEndToolDepth', class: colorHeader },
+      { text: 'Код', value: 'CZatrName', class: colorHeader },
+      { text: 'Операция', value: 'VcGroupOper', class: colorHeader },
+      { text: 'Описание работ', value: 'VcComment', class: colorHeader, width: 200 },
+      { text: 'Рейс', value: 'IRangeNum', class: colorHeader },
+      { text: 'Этап', value: 'IStageNum', class: colorHeader },
+      { text: 'Ок', value: 'ICasingNum', class: colorHeader },
+      { text: 'Парам. р-ра', value: 'VcSolutions', class: colorHeader }
     ],
     protocol: [
       {
