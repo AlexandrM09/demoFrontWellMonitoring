@@ -1,10 +1,11 @@
 <template>
-<div class="title"> у3
+<div class="title">_____
     <v-card
-    class="mx-auto"
-      max-width="344"
+    class="blue-grey lighten-5  mx-auto"
+      max-width="50%"
       outlined
       elevation=5
+      center
     >
         <ChartWellNPV> </ChartWellNPV>
     </v-card>

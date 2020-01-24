@@ -21,7 +21,11 @@ export default {
       title: {
         display: true,
         text: 'Баланс времени'
-      }
+      },
+      borderColor: '#3e95cd',
+      backgroundColor: 'red',
+      borderWidth: 5,
+      cutoutPercentage: 70
     })
   }
 }
