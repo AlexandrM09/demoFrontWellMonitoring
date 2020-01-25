@@ -1,6 +1,6 @@
 <template>
-<div class="title">  График
-        <ChartWellDay> </ChartWellDay>
+<div class="title">  График строительства скважины:
+        <ChartWellDay > </ChartWellDay>
 
 </div>
 </template>

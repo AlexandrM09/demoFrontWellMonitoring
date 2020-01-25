@@ -23,12 +23,19 @@ export default {
           fill: false
         },
         {
-          label: 'План:OK324',
+          label: 'Плановая',
+          type: 'line',
+          borderColor: '#AFB42B',
+          data: [{x: '3.12', y: 0}, {x: '6.12', y: 400}, {x: '14.12', y: 2300}, {x: '20.12', y: 3100}],
+          fill: false
+        },
+        {
+          label: 'План:OK',
           type: 'bar',
           backgroundColor: '#3e95cd',
           data: [0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 2300, 0, 0, 0, 0, 0, 3100]
         }, {
-          label: 'Факт:OK324',
+          label: 'Факт:OK',
           type: 'bar',
           backgroundColor: '#8e5ea2',
           data: [0, 0, 0, 400, 0, 0, 0, 0, 0, 0, 0, 2305, 0, 0, 0, 0, 0]
@@ -36,7 +43,14 @@ export default {
       ]
     }, {
       responsive: true,
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          ticks: {
+            reverse: true
+          }
+        }]
+      }
     })
   }
 }

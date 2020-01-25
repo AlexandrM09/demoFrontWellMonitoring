@@ -11,11 +11,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@statnett/vue-plotly": "^0.3.2",
     "axios": "^0.18.1",
     "bootstrap": "^4.1.1",
     "chart.js": "^2.9.3",
+    "papaparse": "^5.1.1",
+    "plotly.js": "^1.52.1",
     "vue": "^2.5.2",
     "vue-chartjs": "^3.5.0",
+    "vue-plotly": "^1.1.0",
     "vue-router": "^3.0.1",
     "vuetify": "^2.2.5"
   },
