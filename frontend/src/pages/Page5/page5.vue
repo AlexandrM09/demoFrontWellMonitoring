@@ -1,5 +1,5 @@
 <template>
-<div class="title">_____
+<div class="title">.
     <v-card
     class="blue-grey lighten-5  mx-auto"
       max-width="50%"

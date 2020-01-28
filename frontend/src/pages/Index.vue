@@ -3,7 +3,6 @@
   <v-app id="inspire">
     <v-navigation-drawer
     src="static/29157-elektrik-akva-biryuza-svet-sinij-2560x1440.jpg"
-    permanent
     clipped
     app
     class="blue lighten-1 "
@@ -26,7 +25,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app clipped-left height="48px" color="light-blue lighten-5">
+    <v-app-bar app fixed clipped-left height="48px" color="light-blue lighten-5">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer "></v-app-bar-nav-icon>
       <v-toolbar-title>Скважина: </v-toolbar-title>
           <v-menu

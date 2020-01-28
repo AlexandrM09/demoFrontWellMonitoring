@@ -42,7 +42,7 @@ export default {
         z: res.z,
         opacity: 1,
         line: {
-          width: 15,
+          width: 2,
           color: '#558B2F',
           reversescale: false
         }
@@ -50,6 +50,7 @@ export default {
       layout: {
         title: 'Профиль скважины',
         height: 640,
+        series: {wordcloud: {rotation: 45}},
         scene: {
           zaxis: {
             autorange: 'reversed'
